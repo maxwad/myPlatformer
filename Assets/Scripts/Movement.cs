@@ -5,18 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
+    public static Movement instance;
     private Rigidbody rbPlayer;
     private Collider colPlayer;
 
-    private float speed = 15.0f;
+    private float speed = 13.0f;
     private float jumpForce = 30.0f;
-    private float gravityMultiplier = 5f;
-
-    // TODO: if it will not use for animation - delete
-    private bool _isGrounded;
+    private float gravityMultiplier = 5.0f;
+    private float bottomBound = -5.0f;
 
     private void Awake()
     {
+        instance = this;
         rbPlayer = GetComponent<Rigidbody>();
         colPlayer = GetComponent<Collider>();
     }
@@ -30,7 +30,7 @@ public class Movement : MonoBehaviour
             Jump();
 
         //TD: reset level
-        if (transform.position.y < 0)
+        if (transform.position.y < bottomBound)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
@@ -51,11 +51,11 @@ public class Movement : MonoBehaviour
         rbPlayer.AddForce(Vector3.up * jumpForce, ForceMode.VelocityChange);
     }
 
-    private bool IsGrounded()
+    public bool IsGrounded()
     {
         if (Physics.Raycast(transform.position, Vector3.down, colPlayer.bounds.extents.y + 0.1f))
-            return _isGrounded = true;
+            return true;
 
-        return _isGrounded = false;
+        return false;
     }
 }
