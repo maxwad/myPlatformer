@@ -29,6 +29,7 @@ public class PlayerAnimations : MonoBehaviour
         else
             animator.SetBool(TagManager.A_RUN, false);
 
+        // player rotation
         if (rbPlayer.velocity.x > 0)
             transform.eulerAngles = new Vector3(0, 90, 0);
 
