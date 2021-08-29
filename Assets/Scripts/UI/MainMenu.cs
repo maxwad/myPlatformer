@@ -8,31 +8,32 @@ public class MainMenu : MonoBehaviour
 {
     public Camera cam;
     public Slider slider;
-    private AudioSource audioSource;
     private Animator anim;
+
+    private AudioSource audioSource;
+    public AudioClip clickSound;
 
     private void Awake()
     {
         audioSource = cam.GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
-        if (PlayerPrefs.HasKey("musicVolume"))
+
+        if (!PlayerPrefs.HasKey("masterVolume"))
         {
-            audioSource.volume = PlayerPrefs.GetFloat("musicVolume");
-            slider.value = audioSource.volume;
-        }
-        else
-            PlayerPrefs.SetFloat("musicVolume", 1.0f);
+            PlayerPrefs.SetFloat("masterVolume", 0.5f);
+            PlayerPrefs.Save();
+        }        
+
+        audioSource.volume = PlayerPrefs.GetFloat("masterVolume");
+        slider.value = audioSource.volume;
+
     }
 
-    private void Update()
+    public void ChangeVolume(float value)
     {
-        ChangeVolume();
-    }
-
-    private void ChangeVolume()
-    {
-        audioSource.volume = slider.value;
-        PlayerPrefs.SetFloat("musicVolume", slider.value);
+        audioSource.volume = value;
+        PlayerPrefs.SetFloat("masterVolume", value);
+        PlayerPrefs.Save();
     }
 
     public void PlayGame()
@@ -53,5 +54,10 @@ public class MainMenu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void PlayMouseOverSound()
+    {
+        audioSource.PlayOneShot(clickSound);
     }
 }
