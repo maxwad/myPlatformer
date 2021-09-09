@@ -31,11 +31,10 @@ public class PlayerAnimations : MonoBehaviour
 
         // player rotation
         if (rbPlayer.velocity.x > 0)
-            transform.eulerAngles = new Vector3(0, 90, 0);
-
-        if (rbPlayer.velocity.x < 0)
             transform.eulerAngles = new Vector3(0, -90, 0);
 
+        if (rbPlayer.velocity.x < 0)
+            transform.eulerAngles = new Vector3(0, 90, 0);        
 
     }
 

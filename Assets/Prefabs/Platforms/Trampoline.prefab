@@ -98,8 +98,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.9596715, y: 0.6047915, z: 2.9591632}
-  m_Center: {x: 0.0029881, y: -0.05578047, z: 0.0018806458}
+  m_Size: {x: 3.2522464, y: 0.93263614, z: 3.0318446}
+  m_Center: {x: -0.14329934, y: -0.21970278, z: 0.014094889}
 --- !u!54 &31981375
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -115,7 +115,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 122
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!145 &31981374
 SpringJoint:
   m_ObjectHideFlags: 0
@@ -127,7 +127,7 @@ SpringJoint:
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0.24661529, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 28, y: 11.246615, z: 0}
+  m_ConnectedAnchor: {x: 29, y: 10.246615, z: 0}
   serializedVersion: 2
   m_Spring: 3000
   m_Damper: 100

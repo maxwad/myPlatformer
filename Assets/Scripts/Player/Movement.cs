@@ -9,6 +9,12 @@ public class Movement : MonoBehaviour
     private Rigidbody rbPlayer;
     private Collider colPlayer;
 
+    public GameObject lLeg;
+    public GameObject rLeg;
+
+    private bool isGrL;
+    private bool isGrR;
+
     private float speed = 13.0f;
     private float jumpForce = 30.0f;
     private float gravityMultiplier = 5.0f;
@@ -53,9 +59,25 @@ public class Movement : MonoBehaviour
 
     public bool IsGrounded()
     {
-        if (Physics.Raycast(transform.position, Vector3.down, colPlayer.bounds.extents.y + 0.1f))
+        // we have to check both legs grounded because the joints make the other way wrong
+
+        Ray rayLeftLeg = new Ray(lLeg.transform.position, Vector3.down);
+        Ray rayRightLeg = new Ray(rLeg.transform.position, Vector3.down);
+        float distance = 0.3f;
+
+        isGrL = Physics.Raycast(rayLeftLeg, distance);
+        isGrR = Physics.Raycast(rayRightLeg, distance);        
+
+        if (isGrL || isGrR)
             return true;
 
         return false;
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+
+        //Debug.DrawRay(transform.position, Vector3.down * 0.5f, Color.green, 0.5f);
     }
 }
