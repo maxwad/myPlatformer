@@ -34,8 +34,9 @@ public class PlayerAnimations : MonoBehaviour
             transform.eulerAngles = new Vector3(0, -90, 0);
 
         if (rbPlayer.velocity.x < 0)
-            transform.eulerAngles = new Vector3(0, 90, 0);        
+            transform.eulerAngles = new Vector3(0, 90, 0);
 
+        Debug.Log(rbPlayer.velocity.x);
     }
 
     private void JumpAnimation()

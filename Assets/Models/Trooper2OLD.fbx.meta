@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f6f187b1b26c682499aa2266f0b0694e
+guid: e5dcdf6737f9169459aad3db310a0022
 ModelImporter:
   serializedVersion: 21100
   internalIDToNameTable:
@@ -14,7 +14,7 @@ ModelImporter:
     second: Fall
   - first:
       74: 6127263829724109519
-    second: dle
+    second: Idle
   - first:
       74: -2912938774079763571
     second: Jump
@@ -42,9 +42,6 @@ ModelImporter:
   - first:
       74: -1203024227161686236
     second: Walk
-  - first:
-      74: 6127263829724109519
-    second: Idle
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -63,7 +60,7 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    importAnimatedCustomProperties: 1
+    importAnimatedCustomProperties: 0
     importConstraints: 0
     animationCompression: 3
     animationRotationError: 0.5
@@ -92,7 +89,7 @@ ModelImporter:
       loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 1
+      keepOriginalPositionXZ: 0
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -121,7 +118,7 @@ ModelImporter:
       loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 1
+      keepOriginalPositionXZ: 0
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -136,7 +133,7 @@ ModelImporter:
       takeName: Trooper|Fall
       internalID: 0
       firstFrame: 0
-      lastFrame: 18
+      lastFrame: 12
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -150,7 +147,7 @@ ModelImporter:
       loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 1
+      keepOriginalPositionXZ: 0
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -179,66 +176,14 @@ ModelImporter:
       loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 1
+      keepOriginalPositionXZ: 0
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Cube
-        weight: 0
-      - path: Trooper
-        weight: 1
-      - path: Trooper/IKPole.L
-        weight: 0
-      - path: Trooper/IKPole.R
-        weight: 0
-      - path: Trooper/IKTarget.L
-        weight: 0
-      - path: Trooper/IKTarget.R
-        weight: 0
-      - path: Trooper/Root
-        weight: 1
-      - path: Trooper/Root/Spine_1
-        weight: 1
-      - path: Trooper/Root/Spine_1/Spine_2
-        weight: 1
-      - path: Trooper/Root/Spine_1/Spine_2/Head
-        weight: 1
-      - path: Trooper/Root/Spine_1/Spine_2/Shoulder.L
-        weight: 1
-      - path: Trooper/Root/Spine_1/Spine_2/Shoulder.L/UpperArm.L
-        weight: 1
-      - path: Trooper/Root/Spine_1/Spine_2/Shoulder.L/UpperArm.L/LowerArm.L
-        weight: 1
-      - path: Trooper/Root/Spine_1/Spine_2/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L
-        weight: 1
-      - path: Trooper/Root/Spine_1/Spine_2/Shoulder.R
-        weight: 1
-      - path: Trooper/Root/Spine_1/Spine_2/Shoulder.R/UpperArm.R
-        weight: 1
-      - path: Trooper/Root/Spine_1/Spine_2/Shoulder.R/UpperArm.R/LowerArm.R
-        weight: 1
-      - path: Trooper/Root/Spine_1/Spine_2/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R
-        weight: 1
-      - path: Trooper/Root/UpperLeg.L
-        weight: 1
-      - path: Trooper/Root/UpperLeg.L/LowerLeg.L
-        weight: 1
-      - path: Trooper/Root/UpperLeg.L/LowerLeg.L/Foot.L
-        weight: 1
-      - path: Trooper/Root/UpperLeg.R
-        weight: 1
-      - path: Trooper/Root/UpperLeg.R/LowerLeg.R
-        weight: 1
-      - path: Trooper/Root/UpperLeg.R/LowerLeg.R/Foot.R
-        weight: 1
-      - path: Weapon
-        weight: 0
-      maskType: 0
+      transformMask: []
+      maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
@@ -260,7 +205,7 @@ ModelImporter:
       loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 1
+      keepOriginalPositionXZ: 0
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -274,8 +219,8 @@ ModelImporter:
       name: NewJump
       takeName: Trooper|NewJump
       internalID: 0
-      firstFrame: 6
-      lastFrame: 18.2
+      firstFrame: 0
+      lastFrame: 23
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -289,7 +234,7 @@ ModelImporter:
       loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 1
+      keepOriginalPositionXZ: 0
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -304,7 +249,7 @@ ModelImporter:
       takeName: Trooper|NewRun
       internalID: 0
       firstFrame: 0
-      lastFrame: 15
+      lastFrame: 14
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -318,7 +263,7 @@ ModelImporter:
       loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 1
+      keepOriginalPositionXZ: 0
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -347,7 +292,7 @@ ModelImporter:
       loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 1
+      keepOriginalPositionXZ: 0
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -376,7 +321,7 @@ ModelImporter:
       loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 1
+      keepOriginalPositionXZ: 0
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -405,7 +350,7 @@ ModelImporter:
       loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 1
+      keepOriginalPositionXZ: 0
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -434,7 +379,7 @@ ModelImporter:
       loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 1
+      keepOriginalPositionXZ: 0
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -463,7 +408,7 @@ ModelImporter:
       loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 1
+      keepOriginalPositionXZ: 0
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -489,10 +434,10 @@ ModelImporter:
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1
-      loopBlendPositionXZ: 0
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 1
+      keepOriginalPositionXZ: 0
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -710,94 +655,94 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Root
       parentName: Trooper
-      position: {x: 0.7953763, y: -0.2244429, z: 1.4392282}
-      rotation: {x: -0.000000008773785, y: -0.9994536, z: -0.033053007, w: -0.00000027457278}
+      position: {x: 0.7953763, y: -0.2244429, z: 1.439228}
+      rotation: {x: -0.0000000094721875, y: -0.9994536, z: -0.033053007, w: -0.00000025345437}
       scale: {x: 1.0000001, y: 1, z: 1}
     - name: Spine_1
       parentName: Root
       position: {x: -0.0000000011623502, y: 0.93656677, z: -0.000000019557774}
-      rotation: {x: -0.000000038472386, y: 0.9945735, z: 0.10403721, w: -0.0000009050251}
-      scale: {x: 1.0000001, y: 0.9999999, z: 0.9999998}
+      rotation: {x: -0.0000000384724, y: 0.9945735, z: 0.10403721, w: -0.00000090502516}
+      scale: {x: 1.0000001, y: 0.9999998, z: 0.9999998}
     - name: Spine_2
       parentName: Spine_1
-      position: {x: -0.0000000032592027, y: 1.6884038, z: -0.000000016763806}
-      rotation: {x: 0.00000003028657, y: -0.99266917, z: -0.12086347, w: -0.0000010216279}
-      scale: {x: 0.9999998, y: 0.99999976, z: 0.9999999}
+      position: {x: 0.0000000064957817, y: 1.6884038, z: 0.0000000018626451}
+      rotation: {x: 0.00000003028657, y: -0.99266917, z: -0.12086347, w: -0.000001021628}
+      scale: {x: 0.9999996, y: 0.99999994, z: 0.99999976}
     - name: Head
       parentName: Spine_2
-      position: {x: 0.0009987503, y: 1.96248, z: -0.21777534}
-      rotation: {x: 0.04997208, y: 0.0000003888063, z: -0.00000001945382, w: 0.9987506}
-      scale: {x: 0.99999994, y: 0.9999999, z: 1.0000001}
+      position: {x: 0.0009986758, y: 1.9624795, z: -0.2177755}
+      rotation: {x: 0.04997208, y: 0.00000038880637, z: -0.000000019453799, w: 0.9987506}
+      scale: {x: 1, y: 0.9999999, z: 1}
     - name: Shoulder.R
       parentName: Spine_2
-      position: {x: -0.64325017, y: 1.418646, z: -0.30798188}
+      position: {x: -0.6432503, y: 1.4186457, z: -0.30798203}
       rotation: {x: -0.4644291, y: 0.48414496, z: 0.535143, w: 0.51335293}
-      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000001}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000002}
     - name: UpperArm.R
       parentName: Shoulder.R
-      position: {x: -0.00000023841858, y: 1.4736786, z: -0.000000044703484}
+      position: {x: 0.000000014901161, y: 1.4736785, z: 0.00000043958426}
       rotation: {x: 0.0000018924472, y: -0.00000065565104, z: -0.013593895, w: 0.9999077}
-      scale: {x: 1.0000001, y: 0.99999994, z: 1.0000006}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1}
     - name: LowerArm.R
       parentName: UpperArm.R
-      position: {x: -0.00000023841858, y: 1.6568825, z: -0.00000047683716}
+      position: {x: -0.00000008940697, y: 1.6568825, z: -0.00000029802322}
       rotation: {x: -0.0000041044195, y: 0.00000021703968, z: -0.02892366, w: 0.99958163}
-      scale: {x: 1.0000005, y: 1.0000012, z: 1.0000004}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1.000001}
     - name: Hand.R
       parentName: LowerArm.R
-      position: {x: -0.000000095926225, y: 1.9562644, z: 0.00000020721927}
+      position: {x: 0.00000031478703, y: 1.9562649, z: 0.00000012340024}
       rotation: {x: 0.0000009924858, y: -0.000000035343344, z: 0.021740237, w: 0.9997637}
-      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
     - name: Shoulder.L
       parentName: Spine_2
-      position: {x: 0.64324963, y: 1.418646, z: -0.30798286}
+      position: {x: 0.6432496, y: 1.4186457, z: -0.30798292}
       rotation: {x: 0.46442953, y: 0.48414445, z: 0.5351429, w: -0.51335317}
-      scale: {x: 1, y: 1.0000005, z: 1.0000002}
+      scale: {x: 0.9999999, y: 1.0000004, z: 1.0000001}
     - name: UpperArm.L
       parentName: Shoulder.L
-      position: {x: -0.00000013411045, y: 1.4736785, z: 0.000000102911144}
+      position: {x: -0.000000067055225, y: 1.4736786, z: 0.000000017695129}
       rotation: {x: 0.0000014007088, y: 0.000000566244, z: 0.013593835, w: 0.9999076}
-      scale: {x: 1.0000018, y: 0.9999998, z: 1.0000001}
+      scale: {x: 1.0000006, y: 0.99999905, z: 0.99999964}
     - name: LowerArm.L
       parentName: UpperArm.L
-      position: {x: -0.000000022351742, y: 1.6568825, z: -0.00000033341348}
+      position: {x: -0.00000008940697, y: 1.6568829, z: -0.000000009313226}
       rotation: {x: 0.0000030286387, y: 0.00000018631641, z: -0.028923843, w: -0.9995817}
-      scale: {x: 0.9999992, y: 1.0000005, z: 0.99999964}
+      scale: {x: 0.9999997, y: 1.0000007, z: 1.0000001}
     - name: Hand.L
       parentName: LowerArm.L
-      position: {x: 0.00000008940697, y: 1.9562646, z: 0.00000044703484}
+      position: {x: -0.000000059604645, y: 1.9562646, z: 0.0000003874302}
       rotation: {x: 0.00000064648754, y: -0.000000022246576, z: -0.021740284, w: 0.99976367}
-      scale: {x: 1, y: 1.0000002, z: 1.0000004}
+      scale: {x: 1.0000007, y: 1.0000005, z: 1.000001}
     - name: UpperLeg.R
       parentName: Root
       position: {x: -1.2755911, y: 0.56851923, z: 0.03764497}
-      rotation: {x: 0.9984724, y: 0.000000022532763, z: -0.0000009121066, w: -0.05525393}
-      scale: {x: 0.9999998, y: 1, z: 0.99997216}
+      rotation: {x: 0.9984724, y: 0.000000017804693, z: -0.00000082666764, w: -0.05525393}
+      scale: {x: 0.9999998, y: 1, z: 0.9999721}
     - name: LowerLeg.R
       parentName: UpperLeg.R
-      position: {x: -0.00000022631139, y: 2.1364148, z: -0.00000009033829}
-      rotation: {x: -0.00000012778231, y: 0.97882116, z: -0.20471722, w: -0.00000065731547}
-      scale: {x: 1.0000006, y: 0.9999896, z: 1.0000066}
+      position: {x: -0.00000026798807, y: 2.1364148, z: -0.000000027939677}
+      rotation: {x: -0.000000092747214, y: 0.97882116, z: -0.20471722, w: -0.00000065731564}
+      scale: {x: 1.0000002, y: 0.9999896, z: 1.0000063}
     - name: Foot.R
       parentName: LowerLeg.R
-      position: {x: -0.00000008009374, y: 1.5311095, z: 0}
-      rotation: {x: 0.000000009322441, y: 0.7041516, z: -0.7100497, w: 0.00000003077923}
-      scale: {x: 1.0000002, y: 1.0000013, z: 0.99999017}
+      position: {x: 0.000000006519258, y: 1.5311098, z: 0.00000006053597}
+      rotation: {x: 0.0000001082687, y: 0.7041516, z: -0.7100497, w: 0.00000005316104}
+      scale: {x: 1.0000001, y: 1.0000015, z: 0.99998987}
     - name: UpperLeg.L
       parentName: Root
       position: {x: 1.2755913, y: 0.5685191, z: 0.03764354}
-      rotation: {x: 0.9984724, y: -0.00000001036644, z: -0.00000031759768, w: -0.055253923}
-      scale: {x: 0.9999999, y: 0.9999975, z: 0.99997234}
+      rotation: {x: 0.9984724, y: -0.000000015092638, z: -0.0000002321924, w: -0.055253923}
+      scale: {x: 0.9999997, y: 0.9999976, z: 0.99997234}
     - name: LowerLeg.L
       parentName: UpperLeg.L
-      position: {x: -0.00000006472692, y: 2.1364145, z: -0.000000048981747}
-      rotation: {x: -0.000000036933347, y: 0.97882116, z: -0.20471723, w: 0.00000007389824}
-      scale: {x: 1.0000004, y: 0.99998915, z: 1.0000069}
+      position: {x: 0.00000014714897, y: 2.1364143, z: -0.00000007310882}
+      rotation: {x: -0.0000000019120916, y: 0.97882116, z: -0.20471723, w: 0.0000000738982}
+      scale: {x: 1.0000006, y: 0.99998903, z: 1.0000067}
     - name: Foot.L
       parentName: LowerLeg.L
-      position: {x: -0.000000009313226, y: 1.5311095, z: -0.00000002514571}
-      rotation: {x: 0.00000004792735, y: 0.7041516, z: -0.71004975, w: -0.00000022104325}
-      scale: {x: 0.9999997, y: 0.99999493, z: 0.9999962}
+      position: {x: 0.000000058673322, y: 1.5311096, z: 0.00000004656613}
+      rotation: {x: 0.00000008475101, y: 0.7041516, z: -0.71004975, w: -0.0000001371028}
+      scale: {x: 0.99999994, y: 0.99999505, z: 0.9999959}
     - name: IKPole.R
       parentName: Trooper
       position: {x: -1.2755911, y: -1.328775, z: -2.331455}
@@ -820,9 +765,9 @@ ModelImporter:
       scale: {x: 1, y: 0.99999964, z: 0.99999994}
     - name: Weapon
       parentName: Trooper(Clone)
-      position: {x: -2.9554298, y: 7.2800226, z: -2.8009775}
-      rotation: {x: -0.52081174, y: 0.21797806, z: 0.61410314, w: 0.55146897}
-      scale: {x: 1, y: 0.99999994, z: 1}
+      position: {x: -2.955429, y: 6.856283, z: -2.8009768}
+      rotation: {x: -0.52081186, y: 0.21797793, z: 0.614103, w: 0.551469}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
