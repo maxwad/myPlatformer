@@ -24,27 +24,29 @@ public class PlayerAnimations : MonoBehaviour
 
     private void MoveAnimation()
     {
-        if (Mathf.Abs(rbPlayer.velocity.x) > 2)
+        //enable/disable run animation
+        if (Mathf.Abs(rbPlayer.velocity.x) > 1)
             animator.SetBool(TagManager.A_RUN, true);
         else
             animator.SetBool(TagManager.A_RUN, false);
 
-        // player rotation
-        if (rbPlayer.velocity.x > 0)
-            transform.eulerAngles = new Vector3(0, -90, 0);
 
-        if (rbPlayer.velocity.x < 0)
-            transform.eulerAngles = new Vector3(0, 90, 0);
-
-        Debug.Log(rbPlayer.velocity.x);
+        //enable/disable backwalk animation
+        animator.SetBool(TagManager.A_BACKWALK, Movement.instance.isBackWalk);
+        Debug.Log(animator.GetCurrentAnimatorClipInfo(0)[0].clip.name + " - " + Movement.instance.isBackWalk);
     }
 
     private void JumpAnimation()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && Movement.instance.IsGrounded())
-            animator.SetBool(TagManager.A_JUMP, true);
 
-        animator.SetBool(TagManager.A_JUMP, !Movement.instance.IsGrounded());
+        if (Movement.instance.IsGrounded())
+        {
+            animator.SetBool(TagManager.A_JUMP, false);
+        }
+        else
+        {
+            animator.SetBool(TagManager.A_JUMP, true);
+        }
     }
    
 }
