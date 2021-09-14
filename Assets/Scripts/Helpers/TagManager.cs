@@ -5,6 +5,7 @@ public class TagManager
     public static string A_WALK      = "isWalk";
     public static string A_BACKWALK  = "isBackWalk";
     public static string A_RUN       = "isRun";
+    public static string A_FALL      = "isFall";
     public static string A_DEAD      = "isDead";
     public static string A_SHOOT     = "isShoot";
     public static string A_AUTOSHOOT = "isAutoShoot";

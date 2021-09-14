@@ -18,6 +18,7 @@ public class Movement : MonoBehaviour
     public GameObject rLeg;
     private bool isGrL;
     private bool isGrR;
+    public bool isSpacePushed;
 
     private float speed;
     private float speedRun = 13.0f;
@@ -52,7 +53,7 @@ public class Movement : MonoBehaviour
 
     private void Move()
     {
-        //switch run and backwalk
+        //switch run/backwalk
         if (transform.forward.x * rbPlayer.velocity.x > 0)
         {
             speed = speedBackWalk;
@@ -66,7 +67,6 @@ public class Movement : MonoBehaviour
         //side movement
         float sideDirection = Input.GetAxis("Horizontal");
         rbPlayer.velocity = new Vector3(sideDirection * speed, rbPlayer.velocity.y, 0);
-
 
         //it makes jumping more natural
         if (rbPlayer.velocity.y != 0)
@@ -90,12 +90,17 @@ public class Movement : MonoBehaviour
     private void Jump()
     {
         rbPlayer.AddForce(Vector3.up * jumpForce, ForceMode.VelocityChange);
+        isSpacePushed = true;
     }
 
     public bool IsGrounded()
     {
+        if (rbPlayer.velocity.y == 0)
+        {
+            isSpacePushed = false;
+        }
         // we have to check both legs grounded because the joints make the other way wrong
-
+        
         Ray rayLeftLeg = new Ray(lLeg.transform.position, Vector3.down);
         Ray rayRightLeg = new Ray(rLeg.transform.position, Vector3.down);
         float distance = 0.3f;
@@ -104,7 +109,9 @@ public class Movement : MonoBehaviour
         isGrR = Physics.Raycast(rayRightLeg, distance);        
 
         if (isGrL || isGrR)
+        {
             return true;
+        }
 
         return false;
     }
@@ -112,6 +119,7 @@ public class Movement : MonoBehaviour
     void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
+
 
         //Debug.DrawRay(transform.position, Vector3.down * 0.5f, Color.green, 0.5f);
     }
