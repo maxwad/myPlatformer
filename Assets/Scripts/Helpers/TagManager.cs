@@ -10,6 +10,7 @@ public class TagManager
     public static string A_SHOOT     = "isShoot";
     public static string A_AUTOSHOOT = "isAutoShoot";
     public static string A_RELOAD    = "isReload";
+    public static string A_SPEED     = "fSpeed";
 
     // layer's tags
     public static string L_GROUND = "Ground";

@@ -2085,6 +2085,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 460599220689488158, guid: 4382a00e033d8764684506e6b93e0a06, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 460599220803066502, guid: 4382a00e033d8764684506e6b93e0a06, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 767029604691411353, guid: 4382a00e033d8764684506e6b93e0a06, type: 3}
       propertyPath: m_Name
       value: Trooper

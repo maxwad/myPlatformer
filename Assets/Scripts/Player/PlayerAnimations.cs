@@ -5,7 +5,11 @@ using UnityEngine;
 public class PlayerAnimations : MonoBehaviour
 {
     private Rigidbody rbPlayer;
+    public Transform trTarget;
     private Animator animator;
+
+    float speedLocomotion = 0.0f;
+
     private void Awake()
     {
         rbPlayer = GetComponent<Rigidbody>();
@@ -22,41 +26,31 @@ public class PlayerAnimations : MonoBehaviour
 
     private void MoveAnimation()
     {
-        //enable/disable run animation
-        if (Mathf.Abs(rbPlayer.velocity.x) > 1 && Movement.instance.isBackWalk == false)
-            animator.SetBool(TagManager.A_RUN, true);
+        //blendtree
+        float animationStep = 0.01f;
+        float bound = Movement.instance.speedLocomotion;
 
-        if (Mathf.Abs(rbPlayer.velocity.x) < 1 || Movement.instance.isBackWalk)
-            animator.SetBool(TagManager.A_RUN, false);
+        //idle state
+        if (rbPlayer.velocity.x == 0)
+            bound = 0;
 
-        //enable/disable backwalk animation
-        animator.SetBool(TagManager.A_BACKWALK, Movement.instance.isBackWalk);        
+        //run/backwalk state
+        if (bound > speedLocomotion)
+            speedLocomotion += animationStep;
+        else
+            speedLocomotion -= animationStep;
+
+        animator.SetFloat(TagManager.A_SPEED, speedLocomotion);
     }
 
     private void JumpAnimation()
     {
-
-        if (Movement.instance.IsGrounded())
-        {
-            animator.SetBool(TagManager.A_JUMP, false);
-            //animator.SetBool(TagManager.A_FALL, false);
-        }
-        else
-        {
-            animator.SetBool(TagManager.A_JUMP, true);
-
-            //if (Movement.instance.isSpacePushed)
-            //{
-            //    animator.SetBool(TagManager.A_JUMP, true);
-            //    //Debug.Log("Jumping");
-            //}
-            //else
-            //{
-            //    animator.SetBool(TagManager.A_FALL, true);
-            //    //Debug.Log("Falling");
-            //}
-            
-        }
+        animator.SetBool(TagManager.A_JUMP, !Movement.instance.IsGrounded());        
     }
-   
+
+    private void OnAnimatorIK()
+    {
+        animator.SetIKPositionWeight(AvatarIKGoal.RightHand, 1);
+        animator.SetIKPosition(AvatarIKGoal.RightHand, trTarget.position);
+    }
 }

@@ -8,11 +8,15 @@ public class PauseMenuManager : MonoBehaviour
     public static bool isSubMenuOpen;
 
     public GameObject pauseMenuUI;
+    public WeaponIK playerWeaponIK;
 
     private void Awake()
     {
         isGamePaused = false;
         isSubMenuOpen = false;
+
+        //enable/disable WeaponIK for player
+        playerWeaponIK = GameObject.FindGameObjectWithTag("Player").GetComponent<WeaponIK>();
     }
     // Update is called once per frame
     void Update()
@@ -40,6 +44,7 @@ public class PauseMenuManager : MonoBehaviour
 
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1.0f;
+        playerWeaponIK.enabled = true;
         isGamePaused = false;
     }
 
@@ -49,6 +54,7 @@ public class PauseMenuManager : MonoBehaviour
 
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
+        playerWeaponIK.enabled = false;
         isGamePaused = true;
     }
      
