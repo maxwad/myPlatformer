@@ -16,11 +16,11 @@ public class WeaponIK : MonoBehaviour
 
     public int iterations = 10;
     private float weight = 0.6f;
-    private float angleLimit = 75.0f;
+    private float angleLimit = 70.0f;
     private float distanceLimit = 3f;
 
     public HumanBone[] humanBones;
-    public Transform[] boneTransforms;
+    private Transform[] boneTransforms;
 
     private void Start()
     {
