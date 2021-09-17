@@ -5,7 +5,9 @@ using UnityEngine;
 public class Laser : MonoBehaviour
 {
     private LineRenderer laserLine;
-
+    public Transform target;
+    private Vector3 laserEnd;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -13,21 +15,25 @@ public class Laser : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
+    {
+        //laserLine.SetPosition(0, transform.position);
+        int LayerMaskAiming = 1 << 6;
+        LayerMaskAiming = ~ LayerMaskAiming;
+
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.forward * 100, out hit, 40f, LayerMaskAiming))
+            laserEnd = hit.point;
+        else
+            laserEnd = transform.position + transform.forward * 40;
+
+        //laserLine.SetPosition(1, laserEnd);
+
+    }
+
+    private void LateUpdate()
     {
         laserLine.SetPosition(0, transform.position);
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward * 100, out hit))
-        {
-            Debug.Log(hit.collider.name);
-            if (hit.collider)
-            {
-                laserLine.SetPosition(1, new Vector3(0, 0, hit.distance));
-            }
-        }
-        else
-        {
-            //laserLine.SetPosition(1, new Vector3(0, 0, 100));
-        }
+        laserLine.SetPosition(1, laserEnd);
     }
 }

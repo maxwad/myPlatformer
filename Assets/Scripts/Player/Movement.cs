@@ -10,7 +10,6 @@ public class Movement : MonoBehaviour
 
     public Transform trTarget;
     public LayerMask mouseAimMask;
-    public bool isBackWalk;
     private Camera mainCamera;
 
     //groundchecking
@@ -37,7 +36,6 @@ public class Movement : MonoBehaviour
         mainCamera = Camera.main;
     }
 
-    // Update is called once per frame
     void LateUpdate()
     {
         Move();
@@ -45,6 +43,7 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded() && !PauseMenuManager.isGamePaused)
             Jump();
 
+        MouseAiming();
 
         //TD: reset level
         if (transform.position.y < bottomBound)
@@ -83,7 +82,10 @@ public class Movement : MonoBehaviour
         Quaternion rotation = Quaternion.LookRotation(new Vector3(lookDirection, 0, 0));
         rbPlayer.transform.rotation = Quaternion.Lerp(rbPlayer.transform.rotation, rotation, speedRotation * Time.deltaTime);
 
+    }
 
+    private void MouseAiming()
+    {
         //mouse AIMing
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
